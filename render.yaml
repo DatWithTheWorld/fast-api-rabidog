@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: yolov5-fastapi
+    env: docker
+    repo: https://github.com/DatWithTheWorld/fast-api-rabidog
+    branch: main
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: WORKERS_PER_CORE
+        value: "4"
+      - key: MAX_WORKERS
+        value: "24"
+      - key: LOG_LEVEL
+        value: "warning"
+      - key: TIMEOUT
+        value: "200"
+    healthCheckPath: /
+    autoDeploy: true
