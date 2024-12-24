@@ -1,4 +1,5 @@
-FROM tiangolo/uvicorn-gunicorn:python3.9-slim
+FROM tiangolo/uvicorn-gunicorn:python3.10-slim
+
 
 LABEL maintainer="team-erc"
 
